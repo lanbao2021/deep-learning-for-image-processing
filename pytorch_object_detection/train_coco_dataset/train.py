@@ -23,7 +23,7 @@ def create_model(num_classes):
     # 以resnet50为backbone
     # 预训练权重地址：https://download.pytorch.org/models/resnet50-19c8e357.pth
     res50 = resnet50()
-    res50.load_state_dict(torch.load("./resnet50.pth", map_location="cpu"))
+    res50.load_state_dict(torch.load("/home/lenovo/PycharmProjects/deep-learning-for-image-processing/pytorch_object_detection/faster_rcnn/backbone/resnet50.pth", map_location="cpu"))
     backbone = create_feature_extractor(res50, return_nodes={"layer3": "0"})
     backbone.out_channels = 1024
 
@@ -194,7 +194,7 @@ if __name__ == "__main__":
     # 训练设备类型
     parser.add_argument('--device', default='cuda:0', help='device')
     # 训练数据集的根目录
-    parser.add_argument('--data-path', default='/data/coco2017', help='dataset')
+    parser.add_argument('--data-path', default='/home/lenovo/PycharmProjects/deep-learning-for-image-processing/pytorch_object_detection/train_coco_dataset/coco2017', help='dataset')
     # 检测目标类别数(不包含背景)
     parser.add_argument('--num-classes', default=90, type=int, help='num_classes')
     # 文件保存地址
@@ -204,7 +204,7 @@ if __name__ == "__main__":
     # 指定接着从哪个epoch数开始训练
     parser.add_argument('--start_epoch', default=0, type=int, help='start epoch')
     # 训练的总epoch数
-    parser.add_argument('--epochs', default=26, type=int, metavar='N',
+    parser.add_argument('--epochs', default=1, type=int, metavar='N',
                         help='number of total epochs to run')
     # 学习率
     parser.add_argument('--lr', default=0.005, type=float,

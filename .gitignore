@@ -20,3 +20,12 @@ checkpoint
 data
 VOCdevkit
 ssd_resnet50_v1_fpn_shared_box_predictor
+pytorch_object_detection/faster_rcnn/loss_and_lr20220914-022712.png
+pytorch_object_detection/faster_rcnn/mAP.png
+pytorch_object_detection/train_coco_dataset/coco2017
+.gitignore
+pytorch_object_detection/train_coco_dataset/det_results.json
+pytorch_object_detection/train_coco_dataset/loss_and_lr20220914-210145.png
+pytorch_object_detection/faster_rcnn/results20220914-001707.txt
+pytorch_object_detection/train_coco_dataset/mAP.png
+pytorch_object_detection/train_coco_dataset/results20220914-192139.txt
